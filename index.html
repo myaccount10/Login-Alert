@@ -2,52 +2,56 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Suhail Verification</title>
+<title>Account Center</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: Arial, sans-serif;
+  font-family:'Roboto',sans-serif;
 }
 
 body{
   background:#f1f3f4;
-  min-height:100vh;
   display:flex;
-  flex-direction:column;
+  justify-content:center;
 }
 
-/* Header */
+.wrapper{
+  width:100%;
+  max-width:430px; /* mobile width lock */
+  min-height:100vh;
+  background:#f1f3f4;
+  padding:20px;
+}
+
 .header{
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  padding:16px;
+  justify-content:space-between;
+  margin-bottom:40px;
   font-size:18px;
   font-weight:500;
 }
 
 .profile{
-  background:#1a73e8;
-  color:white;
   width:36px;
   height:36px;
+  background:#1a73e8;
+  color:white;
   border-radius:50%;
   display:flex;
   justify-content:center;
   align-items:center;
-  font-weight:500;
 }
 
-/* Logo */
 .logo{
   text-align:center;
-  font-size:34px;
-  font-weight:500;
-  margin-top:10px;
-  letter-spacing:0.5px;
+  font-size:32px;
+  margin-bottom:20px;
 }
 
 .logo span:nth-child(1){color:#4285F4;}
@@ -57,37 +61,28 @@ body{
 .logo span:nth-child(5){color:#0F9D58;}
 .logo span:nth-child(6){color:#DB4437;}
 
-.container{
-  flex:1;
-  padding:24px;
-  max-width:500px;
-  margin:auto;
-  width:100%;
-}
-
 h2{
-  margin:20px 0 10px;
-  font-size:24px;
+  text-align:center;
   font-weight:400;
+  margin-bottom:20px;
 }
 
-.email-box{
+.email{
+  background:white;
+  padding:12px 16px;
+  border-radius:25px;
   display:flex;
   align-items:center;
   gap:10px;
-  background:white;
-  padding:10px 14px;
-  border-radius:25px;
-  font-size:14px;
-  margin-bottom:30px;
-  box-shadow:0 1px 3px rgba(0,0,0,0.1);
+  margin-bottom:35px;
+  box-shadow:0 1px 3px rgba(0,0,0,0.08);
 }
 
 .email-circle{
-  background:#1a73e8;
-  color:white;
   width:28px;
   height:28px;
+  background:#1a73e8;
+  color:white;
   border-radius:50%;
   display:flex;
   justify-content:center;
@@ -96,38 +91,27 @@ h2{
 }
 
 p{
-  font-size:15px;
-  color:#444;
   margin-bottom:15px;
+  color:#444;
 }
 
-/* Input */
 input{
   width:100%;
-  padding:16px;
-  border:2px solid #dadce0;
+  padding:14px;
+  border:2px solid #1a73e8;
   border-radius:6px;
   font-size:16px;
-  transition:all 0.2s ease;
+  margin-bottom:20px;
 }
 
-input:focus{
-  border-color:#1a73e8;
-  outline:none;
-}
-
-/* Checkbox */
 .checkbox{
   display:flex;
   align-items:center;
   gap:8px;
-  margin-top:15px;
-  font-size:14px;
+  margin-bottom:30px;
 }
 
-/* Actions */
 .actions{
-  margin-top:30px;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -136,7 +120,6 @@ input:focus{
 .actions a{
   color:#1a73e8;
   text-decoration:none;
-  font-size:14px;
 }
 
 button{
@@ -145,45 +128,38 @@ button{
   border:none;
   padding:10px 22px;
   border-radius:6px;
-  font-size:14px;
   cursor:pointer;
-  transition:0.2s;
-}
-
-button:hover{
-  background:#1558b0;
 }
 </style>
 </head>
 
 <body>
 
-<div class="header">
-  <span>←</span>
-  <span>Account Center</span>
-  <div class="profile">B</div>
-</div>
+<div class="wrapper">
 
-<div class="logo">
-  <span>S</span><span>u</span><span>h</span><span>a</span><span>i</span><span>l</span>
-</div>
+  <div class="header">
+    ←
+    <div>Account Center</div>
+    <div class="profile">B</div>
+  </div>
 
-<div class="container">
+  <div class="logo">
+    <span>S</span><span>u</span><span>h</span><span>a</span><span>i</span><span>l</span>
+  </div>
 
   <h2>Hi Bushra Naaz</h2>
 
-  <div class="email-box">
+  <div class="email">
     <div class="email-circle">B</div>
     bushraaa354@email.com
   </div>
 
   <p>To continue, first verify it’s you</p>
 
-  <input type="password" id="password" placeholder="Enter your password">
+  <input type="password" placeholder="Enter your password">
 
   <div class="checkbox">
-    <input type="checkbox" id="togglePassword">
-    <label for="togglePassword">Show password</label>
+    <input type="checkbox"> Show password
   </div>
 
   <div class="actions">
@@ -192,19 +168,6 @@ button:hover{
   </div>
 
 </div>
-
-<script>
-const toggle = document.getElementById("togglePassword");
-const password = document.getElementById("password");
-
-toggle.addEventListener("change", function(){
-  if(this.checked){
-    password.type = "text";
-  } else {
-    password.type = "password";
-  }
-});
-</script>
 
 </body>
 </html>
