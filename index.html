@@ -24,7 +24,6 @@ body{
   width:100%;
   max-width:420px;
   min-height:100vh;
-  background:#f2f3f5;
   padding:20px;
 }
 
@@ -33,28 +32,28 @@ body{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  margin-bottom:50px;
+  margin-bottom:40px;
   font-size:18px;
   font-weight:500;
 }
 
-.circle{
-  width:36px;
-  height:36px;
+.profile{
+  width:34px;
+  height:34px;
   border-radius:50%;
   background:#1a73e8;
   color:white;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-weight:500;
+  font-size:14px;
 }
 
 /* Logo */
 .logo{
   text-align:center;
-  font-size:34px;
-  margin-bottom:20px;
+  font-size:32px;
+  margin-bottom:15px;
 }
 
 .logo span:nth-child(1){color:#4285F4;}
@@ -67,49 +66,53 @@ body{
 h2{
   text-align:center;
   font-weight:400;
-  margin-bottom:20px;
+  font-size:26px;
+  margin-bottom:12px;
 }
 
-/* Email Chip */
+/* Email chip */
 .email{
   background:white;
-  border-radius:30px;
-  padding:10px 15px;
+  border-radius:22px;
+  padding:7px 12px;
   display:flex;
   align-items:center;
-  gap:10px;
-  box-shadow:0 2px 6px rgba(0,0,0,0.08);
-  margin-bottom:40px;
+  gap:8px;
+  box-shadow:0 1px 4px rgba(0,0,0,0.08);
+  margin-bottom:25px;
+  font-size:13px;
+  width:fit-content;
+  margin-left:auto;
+  margin-right:auto;
 }
 
-.email span{
-  font-size:14px;
+.email-circle{
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  background:#1a73e8;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:12px;
 }
 
 /* Instruction */
 .text{
   margin-bottom:10px;
   color:#444;
+  font-size:15px;
 }
 
-/* Input underline style */
-.input-group{
-  position:relative;
-  margin-bottom:25px;
-}
-
+/* Password box */
 input{
   width:100%;
-  border:none;
-  border-bottom:2px solid #c4c4c4;
-  padding:10px 0;
+  padding:14px;
+  border:2px solid #1a73e8;
+  border-radius:6px;
   font-size:16px;
-  background:transparent;
-}
-
-input:focus{
-  outline:none;
-  border-bottom:2px solid #1a73e8;
+  margin-bottom:18px;
 }
 
 /* Checkbox */
@@ -117,11 +120,11 @@ input:focus{
   display:flex;
   align-items:center;
   gap:8px;
-  margin-bottom:35px;
+  margin-bottom:30px;
   font-size:14px;
 }
 
-/* Actions */
+/* Bottom actions */
 .actions{
   display:flex;
   justify-content:space-between;
@@ -156,8 +159,8 @@ button:hover{
 
   <div class="header">
     ←
-    <div>Secure Portal</div>
-    <div class="circle">B</div>
+    <div>Account Center</div>
+    <div class="profile">B</div>
   </div>
 
   <div class="logo">
@@ -167,15 +170,13 @@ button:hover{
   <h2>Hi Bushra Naaz</h2>
 
   <div class="email">
-    <div class="circle" style="width:28px;height:28px;font-size:13px;">B</div>
-    <span>bushraaa354@email.com</span>
+    <div class="email-circle">B</div>
+    bushraaa354@email.com
   </div>
 
-  <div class="text">To continue, verify your access</div>
+  <div class="text">To continue, first verify it’s you</div>
 
-  <div class="input-group">
-    <input type="password" id="pass" placeholder="Enter your password">
-  </div>
+  <input type="password" id="pass" placeholder="Enter your password">
 
   <div class="checkbox">
     <input type="checkbox" id="toggle">
