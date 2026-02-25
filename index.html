@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Account Center</title>
+<title>Secure Portal</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
@@ -15,42 +15,45 @@
 }
 
 body{
-  background:#f1f3f4;
+  background:#f2f3f5;
   display:flex;
   justify-content:center;
 }
 
-.wrapper{
+.mobile{
   width:100%;
-  max-width:430px; /* mobile width lock */
+  max-width:420px;
   min-height:100vh;
-  background:#f1f3f4;
+  background:#f2f3f5;
   padding:20px;
 }
 
+/* Header */
 .header{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  margin-bottom:40px;
+  margin-bottom:50px;
   font-size:18px;
   font-weight:500;
 }
 
-.profile{
+.circle{
   width:36px;
   height:36px;
+  border-radius:50%;
   background:#1a73e8;
   color:white;
-  border-radius:50%;
   display:flex;
-  justify-content:center;
   align-items:center;
+  justify-content:center;
+  font-weight:500;
 }
 
+/* Logo */
 .logo{
   text-align:center;
-  font-size:32px;
+  font-size:34px;
   margin-bottom:20px;
 }
 
@@ -67,50 +70,58 @@ h2{
   margin-bottom:20px;
 }
 
+/* Email Chip */
 .email{
   background:white;
-  padding:12px 16px;
-  border-radius:25px;
+  border-radius:30px;
+  padding:10px 15px;
   display:flex;
   align-items:center;
   gap:10px;
-  margin-bottom:35px;
-  box-shadow:0 1px 3px rgba(0,0,0,0.08);
+  box-shadow:0 2px 6px rgba(0,0,0,0.08);
+  margin-bottom:40px;
 }
 
-.email-circle{
-  width:28px;
-  height:28px;
-  background:#1a73e8;
-  color:white;
-  border-radius:50%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+.email span{
   font-size:14px;
 }
 
-p{
-  margin-bottom:15px;
+/* Instruction */
+.text{
+  margin-bottom:10px;
   color:#444;
+}
+
+/* Input underline style */
+.input-group{
+  position:relative;
+  margin-bottom:25px;
 }
 
 input{
   width:100%;
-  padding:14px;
-  border:2px solid #1a73e8;
-  border-radius:6px;
+  border:none;
+  border-bottom:2px solid #c4c4c4;
+  padding:10px 0;
   font-size:16px;
-  margin-bottom:20px;
+  background:transparent;
 }
 
+input:focus{
+  outline:none;
+  border-bottom:2px solid #1a73e8;
+}
+
+/* Checkbox */
 .checkbox{
   display:flex;
   align-items:center;
   gap:8px;
-  margin-bottom:30px;
+  margin-bottom:35px;
+  font-size:14px;
 }
 
+/* Actions */
 .actions{
   display:flex;
   justify-content:space-between;
@@ -120,27 +131,33 @@ input{
 .actions a{
   color:#1a73e8;
   text-decoration:none;
+  font-size:14px;
 }
 
 button{
   background:#1a73e8;
-  color:white;
   border:none;
+  color:white;
   padding:10px 22px;
   border-radius:6px;
+  font-size:14px;
   cursor:pointer;
+}
+
+button:hover{
+  background:#1558b0;
 }
 </style>
 </head>
 
 <body>
 
-<div class="wrapper">
+<div class="mobile">
 
   <div class="header">
     ←
-    <div>Account Center</div>
-    <div class="profile">B</div>
+    <div>Secure Portal</div>
+    <div class="circle">B</div>
   </div>
 
   <div class="logo">
@@ -150,16 +167,19 @@ button{
   <h2>Hi Bushra Naaz</h2>
 
   <div class="email">
-    <div class="email-circle">B</div>
-    bushraaa354@email.com
+    <div class="circle" style="width:28px;height:28px;font-size:13px;">B</div>
+    <span>bushraaa354@email.com</span>
   </div>
 
-  <p>To continue, first verify it’s you</p>
+  <div class="text">To continue, verify your access</div>
 
-  <input type="password" placeholder="Enter your password">
+  <div class="input-group">
+    <input type="password" id="pass" placeholder="Enter your password">
+  </div>
 
   <div class="checkbox">
-    <input type="checkbox"> Show password
+    <input type="checkbox" id="toggle">
+    Show password
   </div>
 
   <div class="actions">
@@ -168,6 +188,13 @@ button{
   </div>
 
 </div>
+
+<script>
+document.getElementById("toggle").addEventListener("change", function(){
+  const p = document.getElementById("pass");
+  p.type = this.checked ? "text" : "password";
+});
+</script>
 
 </body>
 </html>
