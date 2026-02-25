@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suhail Verification</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background:#f1f3f4;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+/* Header */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px;
+  font-size:18px;
+  font-weight:500;
+}
+
+.profile{
+  background:#1a73e8;
+  color:white;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-weight:500;
+}
+
+/* Logo */
+.logo{
+  text-align:center;
+  font-size:34px;
+  font-weight:500;
+  margin-top:10px;
+  letter-spacing:0.5px;
+}
+
+.logo span:nth-child(1){color:#4285F4;}
+.logo span:nth-child(2){color:#DB4437;}
+.logo span:nth-child(3){color:#F4B400;}
+.logo span:nth-child(4){color:#4285F4;}
+.logo span:nth-child(5){color:#0F9D58;}
+.logo span:nth-child(6){color:#DB4437;}
+
+.container{
+  flex:1;
+  padding:24px;
+  max-width:500px;
+  margin:auto;
+  width:100%;
+}
+
+h2{
+  margin:20px 0 10px;
+  font-size:24px;
+  font-weight:400;
+}
+
+.email-box{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:white;
+  padding:10px 14px;
+  border-radius:25px;
+  font-size:14px;
+  margin-bottom:30px;
+  box-shadow:0 1px 3px rgba(0,0,0,0.1);
+}
+
+.email-circle{
+  background:#1a73e8;
+  color:white;
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:14px;
+}
+
+p{
+  font-size:15px;
+  color:#444;
+  margin-bottom:15px;
+}
+
+/* Input */
+input{
+  width:100%;
+  padding:16px;
+  border:2px solid #dadce0;
+  border-radius:6px;
+  font-size:16px;
+  transition:all 0.2s ease;
+}
+
+input:focus{
+  border-color:#1a73e8;
+  outline:none;
+}
+
+/* Checkbox */
+.checkbox{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:15px;
+  font-size:14px;
+}
+
+/* Actions */
+.actions{
+  margin-top:30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.actions a{
+  color:#1a73e8;
+  text-decoration:none;
+  font-size:14px;
+}
+
+button{
+  background:#1a73e8;
+  color:white;
+  border:none;
+  padding:10px 22px;
+  border-radius:6px;
+  font-size:14px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+button:hover{
+  background:#1558b0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <span>←</span>
+  <span>Account Center</span>
+  <div class="profile">B</div>
+</div>
+
+<div class="logo">
+  <span>S</span><span>u</span><span>h</span><span>a</span><span>i</span><span>l</span>
+</div>
+
+<div class="container">
+
+  <h2>Hi Bushra Naaz</h2>
+
+  <div class="email-box">
+    <div class="email-circle">B</div>
+    bushraaa354@email.com
+  </div>
+
+  <p>To continue, first verify it’s you</p>
+
+  <input type="password" id="password" placeholder="Enter your password">
+
+  <div class="checkbox">
+    <input type="checkbox" id="togglePassword">
+    <label for="togglePassword">Show password</label>
+  </div>
+
+  <div class="actions">
+    <a href="#">Forgot password?</a>
+    <button>Confirm</button>
+  </div>
+
+</div>
+
+<script>
+const toggle = document.getElementById("togglePassword");
+const password = document.getElementById("password");
+
+toggle.addEventListener("change", function(){
+  if(this.checked){
+    password.type = "text";
+  } else {
+    password.type = "password";
+  }
+});
+</script>
+
+</body>
+</html>
