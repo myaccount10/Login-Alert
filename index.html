@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Secure Portal</title>
+<title>Account Center</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
@@ -30,8 +30,8 @@ body{
 /* Header */
 .header{
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
   margin-bottom:40px;
   font-size:18px;
   font-weight:500;
@@ -49,79 +49,42 @@ body{
   font-size:14px;
 }
 
-/* Logo */
-.logo{
-  text-align:center;
-  font-size:32px;
-  margin-bottom:15px;
-}
-
-.logo span:nth-child(1){color:#4285F4;}
-.logo span:nth-child(2){color:#DB4437;}
-.logo span:nth-child(3){color:#F4B400;}
-.logo span:nth-child(4){color:#4285F4;}
-.logo span:nth-child(5){color:#0F9D58;}
-.logo span:nth-child(6){color:#DB4437;}
-
+/* Title */
 h2{
-  text-align:center;
+  margin-bottom:15px;
   font-weight:400;
-  font-size:26px;
-  margin-bottom:12px;
+  font-size:20px;
 }
 
-/* Email chip */
-.email{
-  background:white;
-  border-radius:22px;
-  padding:7px 12px;
-  display:flex;
-  align-items:center;
-  gap:8px;
-  box-shadow:0 1px 4px rgba(0,0,0,0.08);
-  margin-bottom:25px;
-  font-size:13px;
-  width:fit-content;
-  margin-left:auto;
-  margin-right:auto;
-}
-
-.email-circle{
-  width:22px;
-  height:22px;
-  border-radius:50%;
-  background:#1a73e8;
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:12px;
-}
-
-/* Instruction */
-.text{
-  margin-bottom:10px;
-  color:#444;
-  font-size:15px;
-}
-
-/* Password box */
-input{
+/* Password input */
+input[type="password"]{
   width:100%;
   padding:14px;
-  border:2px solid #1a73e8;
+  border:1px solid #dadce0;
   border-radius:6px;
   font-size:16px;
-  margin-bottom:18px;
+  outline:none;
+  transition:0.2s;
+  margin-bottom:20px;
 }
 
-/* Checkbox */
-.checkbox{
+/* Blue border on focus */
+input[type="password"]:focus{
+  border:2px solid #1a73e8;
+}
+
+/* Checkbox row */
+.checkbox-row{
   display:flex;
   align-items:center;
-  gap:8px;
+  gap:10px;
   margin-bottom:30px;
   font-size:14px;
+}
+
+.checkbox-row input{
+  width:18px;
+  height:18px;
 }
 
 /* Bottom actions */
@@ -163,24 +126,13 @@ button:hover{
     <div class="profile">B</div>
   </div>
 
-  <div class="logo">
-    <span>S</span><span>u</span><span>h</span><span>a</span><span>i</span><span>l</span>
-  </div>
-
-  <h2>Hi Bushra Naaz</h2>
-
-  <div class="email">
-    <div class="email-circle">B</div>
-    bushraaa354@email.com
-  </div>
-
-  <div class="text">To continue, first verify it’s you</div>
+  <h2>To continue, first verify it’s you</h2>
 
   <input type="password" id="pass" placeholder="Enter your password">
 
-  <div class="checkbox">
+  <div class="checkbox-row">
     <input type="checkbox" id="toggle">
-    Show password
+    <label for="toggle">Show password</label>
   </div>
 
   <div class="actions">
